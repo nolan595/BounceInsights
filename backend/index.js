@@ -1,6 +1,13 @@
 const express = require("express");
 const axios = require("axios");
 const app = express();
+const PORT = process.env.PORT || 3030;
+
+app.get("/", (req, res) => {
+  res.send(
+    "Welcome to my API! I will use this endpoint - /api/countries/:countryName "
+  );
+});
 
 app.get("/api/countries/:countryName", async (req, res) => {
   try {
@@ -14,4 +21,6 @@ app.get("/api/countries/:countryName", async (req, res) => {
   }
 });
 
-app.listen(5000, () => console.log("Server running on port 5000"));
+app.listen(PORT, () => {
+  console.log(`server started on port ${PORT}`);
+});
