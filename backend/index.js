@@ -7,7 +7,7 @@ const cors = require("cors");
 const corsOptions = {
   origin:
     "https://6567c3bad5c1e22bc0c2d0d4--effulgent-pavlova-6e08dd.netlify.app",
-  optionsSuccessStatus: 200, // For legacy browser support
+  optionsSuccessStatus: 200,
 };
 
 app.use(cors(corsOptions));
