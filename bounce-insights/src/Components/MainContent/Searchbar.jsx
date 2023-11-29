@@ -12,7 +12,9 @@ function Searchbar() {
 
   const fetchCountryData = async () => {
     try {
-      const response = await fetch(`/api/countries/${countryName}`);
+      const response = await fetch(
+        `https://bounce-insights-hf6n.onrender.com/api/countries/${countryName}`
+      );
       const data = await response.json();
       const country = Array.isArray(data) ? data[0] : data;
       setCountryData(country);
